@@ -1,0 +1,11 @@
+{
+    "HTML DOM by Id": {
+		"scope": "javascript,typescript",
+		"prefix": "KSGetOnDomById",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
