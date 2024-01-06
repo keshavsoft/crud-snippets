@@ -7,5 +7,27 @@
 			"$2"
 		],
 		"description": "Log output to console"
+	},
+	"Mock document.getElementById": {
+		"scope": "javascript,typescript",
+		"prefix": "KMockDocumentGetElementById",
+		"body": [
+			" let jVarLocal$1 = document.getElementById('$1');"
+		],
+		"description": "Log output to console"
+	},
+	"Mock Return Dom innerHTML": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-RetDomInnerHTML",
+		"body": [
+			"let LocalFuncForjVarLocal$1 = () => {",
+			"\tlet jVarLocal$1 = document.getElementById('jVarLocal$1');",
+			"",
+			"\tif (jVarLocal$1 === null === false) {",
+			"\treturn jVarLocal.innerHTML;",
+			"\t};",
+			"};"
+		],
+		"description": "Log output to console"
 	}
 }
