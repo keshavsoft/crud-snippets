@@ -29,5 +29,13 @@
 			"};"
 		],
 		"description": "Log output to console"
-	}
+	},
+	"One Liners for Collection to Array": {
+		"scope": "javascript,typescript",
+		"prefix": "KSOL Collection to Array",
+		"body": [
+			"\tlet LocalReturnArray = $1.map((element) => element.$2);"
+		],
+		"description": "One liner to convert the collection to array of strings needed from the column selected."
+	},
 }
