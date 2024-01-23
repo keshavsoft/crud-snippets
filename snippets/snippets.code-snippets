@@ -38,4 +38,19 @@
 		],
 		"description": "One liner to convert the collection to array of strings needed from the column selected."
 	},
+	"To Dom Input Value": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-AssignToDomInputValue",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"	let jVarLocalHtmlId = '$1';",
+			"   let jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.value = inValue;",
+			"   };",
+			"};"
+		],
+		"description": "insert the given value to the dom value from id."
+	}
 }
