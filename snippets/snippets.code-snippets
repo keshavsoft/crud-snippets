@@ -52,5 +52,13 @@
 			"};"
 		],
 		"description": "insert the given value to the dom value from id."
+	},
+	"To Dom Input Value": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-ImportJson",
+		"body": [
+			"import countryTable from './data/countries.json' assert {type: 'json'};"
+		],
+		"description": "single liner for import of json"
 	}
 }
