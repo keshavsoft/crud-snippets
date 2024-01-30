@@ -59,6 +59,6 @@
 		"body": [
 			"import countryTable from './data/countries.json' assert {type: 'json'};"
 		],
-		"description": "single liner for import of json"
+		"description": "single liner for import of json with assert"
 	}
 }
