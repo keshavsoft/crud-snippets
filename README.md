@@ -10,4 +10,5 @@ https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
 vsce package
 
+nknnkumar@yahoo.com
 
