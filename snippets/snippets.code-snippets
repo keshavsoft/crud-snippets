@@ -52,11 +52,11 @@
 		],
 		"description": "insert the given value to the dom value from id."
 	},
-	"To Dom Input Value": {
+	"ImportJson Single Liner": {
 		"scope": "javascript,typescript",
 		"prefix": "KS-ImportJson",
 		"body": [
-			"import countryTable from './data/countries.json' assert {type: 'json'};"
+			"import ConfigJson from './data/config.json' with {type: 'json'};"
 		],
 		"description": "single liner for import of json with assert"
 	},
@@ -65,10 +65,11 @@
 		"prefix": "KS-GetDomValue",
 		"body": [
 			"let LocalFuncForjVarLocal$1 = () => {",
-			"\tlet jVarLocal$1 = document.getElementById('jVarLocal$1');",
+			"\tlet jVarLocal$1 = '$1'",
+			"\tlet jVarLocalHtmlId = document.getElementById('jVarLocal$1');",
 			"",
-			"\tif (jVarLocal$1 === null === false) {",
-			"\treturn jVarLocal$1.value.trim();",
+			"\tif (jVarLocalHtmlId === null === false) {",
+			"\treturn jVarLocalHtmlId.value.trim();",
 			"\t};",
 			"};"
 		],
