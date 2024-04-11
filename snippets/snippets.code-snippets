@@ -66,7 +66,7 @@
 		"body": [
 			"let LocalFuncForjVarLocal$1 = () => {",
 			"\tlet jVarLocal$1 = '$1'",
-			"\tlet jVarLocalHtmlId = document.getElementById('jVarLocal$1');",
+			"\tlet jVarLocalHtmlId = document.getElementById(jVarLocal$1);",
 			"",
 			"\tif (jVarLocalHtmlId === null === false) {",
 			"\treturn jVarLocalHtmlId.value.trim();",
