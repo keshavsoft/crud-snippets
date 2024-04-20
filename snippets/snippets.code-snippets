@@ -77,7 +77,7 @@
 	},
 	"To Dom InnerHTML": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-AssignToDomInputValue",
+		"prefix": "KS-AssignToDomInnerHTML",
 		"body": [
 			"let jFLocalToInput$1 = (inValue) => {",
 			"	let jVarLocalHtmlId = '$1';",
