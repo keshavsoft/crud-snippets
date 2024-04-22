@@ -90,4 +90,15 @@
 		],
 		"description": "insert the input value to the innerHTML of DOM control with specified Id."
 	},
+	"Html Template To String": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlTemplateToString",
+		"body": [
+			"let jVarLocalTemplateFromHtml = document.getElementById('$1');",
+			"let clone = jVarLocalTemplateFromHtml.content.cloneNode('true');",
+			"const s = new XMLSerializer();",
+			"const str = s.serializeToString(clone);"
+		],
+		"description": "convert the html template tag to string using XMLSerializer"
+	}
 }
