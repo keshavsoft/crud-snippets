@@ -110,7 +110,7 @@
 			"\tlet jVarLocalHtmlClassName = inHtmlClassName;",
 			"\tlet jVarLocalTextContent = inTextContent;",
 			"",
-			"\tlet jVarLocalFound = jVarLocalClone.querySelector(`.${jVarLocalHtmlClassName}`);",
+			"\tlet jVarLocalFound = jVarLocalClone.querySelector(`.\\${jVarLocalHtmlClassName}`);",
 			"\tjVarLocalFound.textContent = jVarLocalTextContent;",
 			"};"
 		],
