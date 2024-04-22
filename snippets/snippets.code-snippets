@@ -100,5 +100,20 @@
 			"const str = s.serializeToString(clone);"
 		],
 		"description": "convert the html template tag to string using XMLSerializer"
+	},
+	"Html Template Change textContent": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlTemplateChangeTextContentByClass",
+		"body": [
+			"let jFLocalTotextContent = ({ inClone, inHtmlClassName, inTextContent }) => {",
+			"\tlet jVarLocalClone = inClone;",
+			"\tlet jVarLocalHtmlClassName = inHtmlClassName;",
+			"\tlet jVarLocalTextContent = inTextContent;",
+			"",
+			"\tlet jVarLocalFound = jVarLocalClone.querySelector(`.${jVarLocalHtmlClassName}`);",
+			"\tjVarLocalFound.textContent = jVarLocalTextContent;",
+			"};"
+		],
+		"description": "insert the supplied value in the textContent of the found class html element in template"
 	}
 }
