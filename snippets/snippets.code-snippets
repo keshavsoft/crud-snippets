@@ -9,7 +9,7 @@
 	},
 	"Mock document.getElementById": {
 		"scope": "javascript,typescript",
-		"prefix": "KMockDocumentGetElementById",
+		"prefix": "KS-DocumentGetElementById",
 		"body": [
 			" let jVarLocal$1 = document.getElementById('$1');"
 		],
