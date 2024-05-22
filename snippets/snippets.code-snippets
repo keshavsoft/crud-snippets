@@ -115,5 +115,20 @@
 			"};"
 		],
 		"description": "insert the supplied value in the textContent of the found class html element in template"
+	},
+	"DomElementFocus": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-DomElementFocus",
+		"body": [
+			"let LocalFuncFor$1Focus = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"",
+			"\tif (jVarLocal$1 === null === false) {",
+			"\t\tjVarLocal$1.focus();",
+			"\t};",
+			"};"
+		],
+		"description": "Log output to console"
 	}
 }

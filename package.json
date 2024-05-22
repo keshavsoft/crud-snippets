@@ -2,7 +2,7 @@
   "name": "crud-snippets",
   "displayName": "crud-snippets",
   "description": "",
-  "version": "0.0.19",
+  "version": "0.0.22",
   "publisher": "KeshavSoft",
   "engines": {
     "vscode": "^1.85.0"
