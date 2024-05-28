@@ -1,7 +1,7 @@
 {
 	"HTML DOM by Id": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-Log to Console",
+		"prefix": "KSLog to Console",
 		"body": [
 			"console.log('$1',$1);"
 		],
@@ -9,7 +9,7 @@
 	},
 	"Mock document.getElementById": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-DocumentGetElementById",
+		"prefix": "KSDocumentGetElementById",
 		"body": [
 			" let jVarLocal$1 = document.getElementById('$1');"
 		],
@@ -17,7 +17,7 @@
 	},
 	"Mock Return Dom innerHTML": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-RetDomInnerHTML",
+		"prefix": "KSRetDomInnerHTML",
 		"body": [
 			"let LocalFuncForjVarLocal$1 = () => {",
 			"\tlet jVarLocal$1 = document.getElementById('jVarLocal$1');",
@@ -39,7 +39,7 @@
 	},
 	"To Dom Input Value": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-AssignToDomInputValue",
+		"prefix": "KSAssignToDomInputValue",
 		"body": [
 			"let jFLocalToInput$1 = (inValue) => {",
 			"	let jVarLocalHtmlId = '$1';",
@@ -54,7 +54,7 @@
 	},
 	"ImportJson Single Liner": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-ImportJson",
+		"prefix": "KSImportJson",
 		"body": [
 			"import ConfigJson from './data/config.json' with {type: 'json'};"
 		],
@@ -62,7 +62,7 @@
 	},
 	"Get Value from Dom": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-GetDomValue",
+		"prefix": "KSGetDomValue",
 		"body": [
 			"let jFLocal$1 = () => {",
 			"\tlet jVarLocal$1 = '$1'",
@@ -77,7 +77,7 @@
 	},
 	"To Dom InnerHTML": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-AssignToDomInnerHTML",
+		"prefix": "KSAssignToDomInnerHTML",
 		"body": [
 			"let jFLocalToInput$1 = (inValue) => {",
 			"	let jVarLocalHtmlId = '$1';",
@@ -92,7 +92,7 @@
 	},
 	"Html Template To String": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-HtmlTemplateToString",
+		"prefix": "KSHtmlTemplateToString",
 		"body": [
 			"let jVarLocalTemplateFromHtml = document.getElementById('$1');",
 			"let clone = jVarLocalTemplateFromHtml.content.cloneNode('true');",
@@ -103,7 +103,7 @@
 	},
 	"Html Template Change textContent": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-HtmlTemplateChangeTextContentByClass",
+		"prefix": "KSHtmlTemplateChangeTextContentByClass",
 		"body": [
 			"let jFLocalTotextContent = ({ inClone, inHtmlClassName, inTextContent }) => {",
 			"\tlet jVarLocalClone = inClone;",
@@ -118,7 +118,7 @@
 	},
 	"DomElementFocus": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-DomElementFocus",
+		"prefix": "KSDomElementFocus",
 		"body": [
 			"let LocalFuncFor$1Focus = () => {",
 			"\tlet jVarLocalHtmlId = '$1';",
@@ -133,7 +133,7 @@
 	},
 	"DomAddToSelect": {
 		"scope": "javascript,typescript",
-		"prefix": "KS-DomAddToSelect",
+		"prefix": "KSDomAddToSelect",
 		"body": [
 			"let jFLocalStartFunc = (inDataAsArray, inHtmlSelectId) => {",
 			"\tlet LocalinHtmlSelectId = inHtmlSelectId;",
@@ -141,7 +141,7 @@
 			"",
 			"\tvar selectElement = document.getElementById(LocalinHtmlSelectId);",
 			"",
-			"for (var i = 0; i < LocalDataAsArray.length; i++) {",
+			"\tfor (var i = 0; i < LocalDataAsArray.length; i++) {",
 			"\t\tvar option = document.createElement('option');",
 			"\t\toption.value = LocalDataAsArray[i];",
 			"\t\toption.textContent = LocalDataAsArray[i];",
