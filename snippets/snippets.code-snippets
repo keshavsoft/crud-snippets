@@ -130,5 +130,25 @@
 			"};"
 		],
 		"description": "Log output to console"
+	},
+	"DomAddToSelect": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-DomAddToSelect",
+		"body": [
+			"let jFLocalStartFunc = (inDataAsArray, inHtmlSelectId) => {",
+			"\tlet LocalinHtmlSelectId = inHtmlSelectId;",
+			"\tlet LocalDataAsArray = inDataAsArray;",
+			"",
+			"\tvar selectElement = document.getElementById(LocalinHtmlSelectId);",
+			"",
+			"for (var i = 0; i < LocalDataAsArray.length; i++) {",
+			"\t\tvar option = document.createElement('option');",
+			"\t\toption.value = LocalDataAsArray[i];",
+			"\t\toption.textContent = LocalDataAsArray[i];",
+			"\t\tselectElement.appendChild(option);",
+			"\t};",
+			"};",
+		],
+		"description": "Log output to console"
 	}
 }
