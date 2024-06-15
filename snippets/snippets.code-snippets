@@ -150,5 +150,41 @@
 			"};",
 		],
 		"description": "Log output to console"
+	},
+	"FilesInFolder": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlFilesInFolder",
+		"body": [
+			"const FuncForHtmlFilesInFolder = ({ inRootFolder }) => {""\tconst root = inRootFolder;",
+			"\tlet files = {}",
+			"",
+			"\tfs.readdirSync(root)",
+			"\t\t.filter(filename => filename.endsWith('.html'))",
+			"\t\t.forEach(filename => {",
+			"\t\t\tfiles[filename.slice(0, -5)] = resolve(root, filename)",
+			"\t\t});",
+			"",
+			"\treturn files;",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"JsonFilesInFolder": {
+		"scope": "javascript,typescript",
+		"prefix": "KSJsonFilesInFolder",
+		"body": [
+			"const FuncForJsonFilesInFolder = ({ inRootFolder }) => {",
+			"\tconst root = inRootFolder;",
+			"\tlet files = {}",
+			"\tlet LocalFilesAray = [];",
+			"\tlet k1 = fs.readdirSync(root);",
+			"",
+			"\tLocalFilesAray = fs.readdirSync(root)",
+			"\t\t.filter(filename => filename.endsWith('.json'));",
+			"",
+			"\treturn LocalFilesAray;",
+			"};"
+		],
+		"description": "Log output to console"
 	}
 }
