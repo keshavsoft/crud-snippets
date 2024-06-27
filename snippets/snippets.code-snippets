@@ -186,5 +186,18 @@
 			"};"
 		],
 		"description": "Log output to console"
+	},
+	"BrowserGetUrlPramas": {
+		"scope": "javascript,typescript",
+		"prefix": "KSBrowserGetUrlPramas",
+		"body": [
+			"let getUrlQueryParams = ({ inGetKey }) => {",
+			"\tconst queryString = window.location.search;",
+			"\tconst parameters = new URLSearchParams(queryString);",
+			"\tconst value = parameters.get(inGetKey);",
+			"\treturn value;",
+			"};"
+		],
+		"description": "In Browser Get the UrlPramas from url..."
 	}
 }
