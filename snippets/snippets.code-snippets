@@ -199,5 +199,27 @@
 			"};"
 		],
 		"description": "In Browser Get the UrlPramas from url..."
+	},
+	"HtmlDomBuildTable": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlDomBuildTable",
+		"body": [
+			"let jFLocalBuildTable = ({ inData, inColumnKeys, inTableId }) => {",
+			"\tlet jVarLocalTableName = inTableId;",
+			"\tlet jVarLocalTable = document.getElementById(`${jVarLocalTableName}`);",
+			"",
+			"\tlet jVarLocalColumnKeys = inColumnKeys;",
+			"",
+			"\tinData.forEach(element => {",
+			"\t\tlet tr = jVarLocalTable.insertRow(-1);",
+			"",
+			"\t\tfor (var i = 0; i < jVarLocalColumnKeys.length; i++) {",
+			"\t\t\tvar tabCell = tr.insertCell(-1);",
+			"\t\t\ttabCell.innerHTML = element[jVarLocalColumnKeys[i]];",
+			"\t\t};",
+			"\t});",
+			"};"
+		],
+		"description": "In Browser build html table from json"
 	}
 }
