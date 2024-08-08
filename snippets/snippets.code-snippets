@@ -221,5 +221,20 @@
 			"};"
 		],
 		"description": "In Browser build html table from json"
+	},
+	"HtmlDomAssignDate": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlDomAssignDate",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.valueAsDate = inValue;",
+			"   };",
+			"};"
+		],
+		"description": "In Browser assign date to input"
 	}
 }
