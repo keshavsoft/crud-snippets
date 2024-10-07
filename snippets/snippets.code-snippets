@@ -76,8 +76,8 @@
 		"description": "Log output to console"
 	},
 	"To Dom InnerHTML": {
-		"scope": "javascript,typescript",
-		"prefix": "KSAssignToDomInnerHTML",
+		"scope": "javascript, typescript",
+		"prefix": "KS-HTML-DOM-AssignToInnerHTML",
 		"body": [
 			"let jFLocalToInput$1 = (inValue) => {",
 			"	let jVarLocalHtmlId = '$1';",
