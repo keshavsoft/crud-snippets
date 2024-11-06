@@ -236,5 +236,20 @@
 			"};"
 		],
 		"description": "In Browser assign date to input"
+	},
+"HtmlDomDisplayNone": {
+		"scope": "javascript,typescript",
+		"prefix": "HtmlDomDisplayNone",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.style.display = 'none';",
+			"   };",
+			"};"
+		],
+		"description": "In Browser assign date to input"
 	}
 }
