@@ -237,11 +237,11 @@
 		],
 		"description": "In Browser assign date to input"
 	},
-"HtmlDomDisplayNone": {
+	"HtmlDomDisplayNone": {
 		"scope": "javascript,typescript",
-		"prefix": "HtmlDomDisplayNone",
+		"prefix": "KS-HtmlDomDisplayNone",
 		"body": [
-			"let jFLocalToInput$1 = (inValue) => {",
+			"let jFLocalDisplayNone$1 = () => {",
 			"\tlet jVarLocalHtmlId = '$1';",
 			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
 			"   ",
@@ -250,6 +250,21 @@
 			"   };",
 			"};"
 		],
-		"description": "In Browser assign date to input"
+		"description": "In Browser change display in style to none"
+	},
+	"HtmlDomDisplayShow": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlDomDisplayShow",
+		"body": [
+			"let jFLocalDisplayShow$1 = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.style.display = '';",
+			"   };",
+			"};"
+		],
+		"description": "In Browser change display in style to show"
 	}
 }
