@@ -266,5 +266,25 @@
 			"};"
 		],
 		"description": "In Browser change display in style to show"
+	},
+	"JsFromLocalStorage": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-JsFromLocalStorage",
+		"body": [
+			"const jFLocalFromLocalStorage = () => {",
+			"\tconst jVarLocalAddOnData = localStorage.getItem(jVarCommonKeyName);",
+			"\tconst jVarLocalAddOnDataAsJson = JSON.parse(jVarLocalAddOnData);",
+			"",
+			"\treturn jVarLocalAddOnDataAsJson;",
+			"};",
+			"",
+			"const jFLocalGetRate = ({ inCheckValue }) => {",
+			"\tconst jVarLocalAddOnArray = jFLocalFromLocalStorage();",
+			"\tconst found = jVarLocalAddOnArray.find((element) => element[jVarCommonCheckKey] === inCheckValue);",
+			"",
+			"\treturn found[jVarCommonReturnKey];",
+			"};"
+		],
+		"description": "In Js access local storage by key name"
 	}
 }
