@@ -286,5 +286,28 @@
 			"};"
 		],
 		"description": "In Js access local storage by key name"
+	},
+	"NodeJsInsertTimeSpan": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-NodeJsInsertTimeSpan",
+		"body": [
+			"const TimeSpan = (dateTime) => {",
+			"\tconst now = new Date();",
+			"\tconst past = new Date(dateTime);",
+			"\tconst diffMs = now - past;",
+			"\t",
+			"\tconst diffMonths = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30.44)); // Average month length",
+			"\tconst diffDays = Math.floor((diffMs % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));",
+			"\tconst diffHrs = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));",
+			"\tconst diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));",
+			"\t",
+			"\tif (diffMonths > 0) return `${diffMonths} months, ${diffDays} days, ${diffHrs} hrs, ${diffMins} min`;",
+			"\tif (diffDays > 0) return `${diffDays} days, ${diffHrs} hrs, ${diffMins} min`;",
+			"\tif (diffHrs > 0) return `${diffHrs} hrs, ${diffMins} min`;",
+			"\t",
+			"\treturn `${diffMins} min`;",
+			"};"
+		],
+		"description": "In Js insert code for TimeSpan comparing with current time"
 	}
 }
