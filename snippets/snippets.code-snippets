@@ -309,5 +309,19 @@
 			"};"
 		],
 		"description": "In Js insert code for TimeSpan comparing with current time"
+	},
+	"WSChangeName": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-WSChangeName",
+		"body": [
+			"const jFLocalChangeName = (inNameToChange) => {",
+			"\tlet jVarLocalObjectToServer = {};",
+			"\tjVarLocalObjectToServer.Type = 'ChangeName';",
+			"\tjVarLocalObjectToServer.Message = inNameToChange;",
+			"\t",
+			"\twebSocket.send(JSON.stringify(jVarLocalObjectToServer));",
+			"};"
+		],
+		"description": "In Js insert code for Change Name through WebSocket"
 	}
 }
