@@ -1,0 +1,364 @@
+{
+	"HTML DOM by Id": {
+		"scope": "javascript,typescript",
+		"prefix": "KSLog to Console",
+		"body": [
+			"console.log('$1',$1);"
+		],
+		"description": "Log output to console"
+	},
+	"Mock document.getElementById": {
+		"scope": "javascript,typescript",
+		"prefix": "KSDocumentGetElementById",
+		"body": [
+			" let jVarLocal$1 = document.getElementById('$1');"
+		],
+		"description": "Log output to console"
+	},
+	"Mock Return Dom innerHTML": {
+		"scope": "javascript,typescript",
+		"prefix": "KSRetDomInnerHTML",
+		"body": [
+			"let LocalFuncForjVarLocal$1 = () => {",
+			"\tlet jVarLocal$1 = document.getElementById('jVarLocal$1');",
+			"",
+			"\tif (jVarLocal$1 === null === false) {",
+			"\treturn jVarLocal.innerHTML;",
+			"\t};",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"One Liners for Collection to Array": {
+		"scope": "javascript,typescript",
+		"prefix": "KSOL Collection to Array",
+		"body": [
+			"\tlet LocalReturnArray = $1.map((element) => element.$2);"
+		],
+		"description": "One liner to convert the collection to array of strings needed from the column selected."
+	},
+	"To Dom Input Value": {
+		"scope": "javascript,typescript",
+		"prefix": "KSAssignToDomInputValue",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"	let jVarLocalHtmlId = '$1';",
+			"   let jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.value = inValue;",
+			"   };",
+			"};"
+		],
+		"description": "insert the given value to the dom value from id."
+	},
+	"ImportJson Single Liner": {
+		"scope": "javascript,typescript",
+		"prefix": "KSImportJson",
+		"body": [
+			"import ConfigJson from './data/config.json' with {type: 'json'};"
+		],
+		"description": "single liner for import of json with assert"
+	},
+	"Get Value from Dom": {
+		"scope": "javascript,typescript",
+		"prefix": "KSGetDomValue",
+		"body": [
+			"let jFLocal$1 = () => {",
+			"\tlet jVarLocal$1 = '$1'",
+			"\tlet jVarLocalHtmlId = document.getElementById(jVarLocal$1);",
+			"",
+			"\tif (jVarLocalHtmlId === null === false) {",
+			"\treturn jVarLocalHtmlId.value.trim();",
+			"\t};",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"To Dom InnerHTML": {
+		"scope": "javascript, typescript",
+		"prefix": "KS-HTML-DOM-AssignToInnerHTML",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"	let jVarLocalHtmlId = '$1';",
+			"   let jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.innerHTML = inValue;",
+			"   };",
+			"};"
+		],
+		"description": "insert the input value to the innerHTML of DOM control with specified Id."
+	},
+	"Html Template To String": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlTemplateToString",
+		"body": [
+			"let jVarLocalTemplateFromHtml = document.getElementById('$1');",
+			"let clone = jVarLocalTemplateFromHtml.content.cloneNode('true');",
+			"const s = new XMLSerializer();",
+			"const str = s.serializeToString(clone);"
+		],
+		"description": "convert the html template tag to string using XMLSerializer"
+	},
+	"Html Template Change textContent": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlTemplateChangeTextContentByClass",
+		"body": [
+			"let jFLocalTotextContent = ({ inClone, inHtmlClassName, inTextContent }) => {",
+			"\tlet jVarLocalClone = inClone;",
+			"\tlet jVarLocalHtmlClassName = inHtmlClassName;",
+			"\tlet jVarLocalTextContent = inTextContent;",
+			"",
+			"\tlet jVarLocalFound = jVarLocalClone.querySelector(`.\\${jVarLocalHtmlClassName}`);",
+			"\tjVarLocalFound.textContent = jVarLocalTextContent;",
+			"};"
+		],
+		"description": "insert the supplied value in the textContent of the found class html element in template"
+	},
+	"DomElementFocus": {
+		"scope": "javascript,typescript",
+		"prefix": "KSDomElementFocus",
+		"body": [
+			"let LocalFuncFor$1Focus = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"",
+			"\tif (jVarLocal$1 === null === false) {",
+			"\t\tjVarLocal$1.focus();",
+			"\t};",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"DomAddToSelect": {
+		"scope": "javascript,typescript",
+		"prefix": "KSDomAddToSelect",
+		"body": [
+			"let jFLocalStartFunc = (inDataAsArray, inHtmlSelectId) => {",
+			"\tlet LocalinHtmlSelectId = inHtmlSelectId;",
+			"\tlet LocalDataAsArray = inDataAsArray;",
+			"",
+			"\tvar selectElement = document.getElementById(LocalinHtmlSelectId);",
+			"",
+			"\tfor (var i = 0; i < LocalDataAsArray.length; i++) {",
+			"\t\tvar option = document.createElement('option');",
+			"\t\toption.value = LocalDataAsArray[i];",
+			"\t\toption.textContent = LocalDataAsArray[i];",
+			"\t\tselectElement.appendChild(option);",
+			"\t};",
+			"};",
+		],
+		"description": "Log output to console"
+	},
+	"FilesInFolder": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlFilesInFolder",
+		"body": [
+			"const FuncForHtmlFilesInFolder = ({ inRootFolder }) => {""\tconst root = inRootFolder;",
+			"\tlet files = {}",
+			"",
+			"\tfs.readdirSync(root)",
+			"\t\t.filter(filename => filename.endsWith('.html'))",
+			"\t\t.forEach(filename => {",
+			"\t\t\tfiles[filename.slice(0, -5)] = resolve(root, filename)",
+			"\t\t});",
+			"",
+			"\treturn files;",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"JsonFilesInFolder": {
+		"scope": "javascript,typescript",
+		"prefix": "KSJsonFilesInFolder",
+		"body": [
+			"const FuncForJsonFilesInFolder = ({ inRootFolder }) => {",
+			"\tconst root = inRootFolder;",
+			"\tlet files = {}",
+			"\tlet LocalFilesAray = [];",
+			"\tlet k1 = fs.readdirSync(root);",
+			"",
+			"\tLocalFilesAray = fs.readdirSync(root)",
+			"\t\t.filter(filename => filename.endsWith('.json'));",
+			"",
+			"\treturn LocalFilesAray;",
+			"};"
+		],
+		"description": "Log output to console"
+	},
+	"BrowserGetUrlPramas": {
+		"scope": "javascript,typescript",
+		"prefix": "KSBrowserGetUrlPramas",
+		"body": [
+			"let getUrlQueryParams = ({ inGetKey }) => {",
+			"\tconst queryString = window.location.search;",
+			"\tconst parameters = new URLSearchParams(queryString);",
+			"\tconst value = parameters.get(inGetKey);",
+			"\treturn value;",
+			"};"
+		],
+		"description": "In Browser Get the UrlPramas from url..."
+	},
+	"HtmlDomBuildTable": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlDomBuildTable",
+		"body": [
+			"let jFLocalBuildTable = ({ inData, inColumnKeys, inTableId }) => {",
+			"\tlet jVarLocalTableName = inTableId;",
+			"\tlet jVarLocalTable = document.getElementById(`${jVarLocalTableName}`);",
+			"",
+			"\tlet jVarLocalColumnKeys = inColumnKeys;",
+			"",
+			"\tinData.forEach(element => {",
+			"\t\tlet tr = jVarLocalTable.insertRow(-1);",
+			"",
+			"\t\tfor (var i = 0; i < jVarLocalColumnKeys.length; i++) {",
+			"\t\t\tvar tabCell = tr.insertCell(-1);",
+			"\t\t\ttabCell.innerHTML = element[jVarLocalColumnKeys[i]];",
+			"\t\t};",
+			"\t});",
+			"};"
+		],
+		"description": "In Browser build html table from json"
+	},
+	"HtmlDomAssignDate": {
+		"scope": "javascript,typescript",
+		"prefix": "KSHtmlDomAssignDate",
+		"body": [
+			"let jFLocalToInput$1 = (inValue) => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.valueAsDate = inValue;",
+			"   };",
+			"};"
+		],
+		"description": "In Browser assign date to input"
+	},
+	"HtmlDomDisplayNone": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlDomDisplayNone",
+		"body": [
+			"let jFLocalDisplayNone$1 = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.style.display = 'none';",
+			"   };",
+			"};"
+		],
+		"description": "In Browser change display in style to none"
+	},
+	"HtmlDomDisplayShow": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlDomDisplayShow",
+		"body": [
+			"let jFLocalDisplayShow$1 = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"      jVarLocal$1.style.display = '';",
+			"   };",
+			"};"
+		],
+		"description": "In Browser change display in style to show"
+	},
+	"JsFromLocalStorage": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-JsFromLocalStorage",
+		"body": [
+			"const jFLocalFromLocalStorage = () => {",
+			"\tconst jVarLocalAddOnData = localStorage.getItem(jVarCommonKeyName);",
+			"\tconst jVarLocalAddOnDataAsJson = JSON.parse(jVarLocalAddOnData);",
+			"",
+			"\treturn jVarLocalAddOnDataAsJson;",
+			"};",
+			"",
+			"const jFLocalGetRate = ({ inCheckValue }) => {",
+			"\tconst jVarLocalAddOnArray = jFLocalFromLocalStorage();",
+			"\tconst found = jVarLocalAddOnArray.find((element) => element[jVarCommonCheckKey] === inCheckValue);",
+			"",
+			"\treturn found[jVarCommonReturnKey];",
+			"};"
+		],
+		"description": "In Js access local storage by key name"
+	},
+	"NodeJsInsertTimeSpan": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-NodeJsInsertTimeSpan",
+		"body": [
+			"const TimeSpan = (dateTime) => {",
+			"\tconst now = new Date();",
+			"\tconst past = new Date(dateTime);",
+			"\tconst diffMs = now - past;",
+			"\t",
+			"\tconst diffMonths = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30.44)); // Average month length",
+			"\tconst diffDays = Math.floor((diffMs % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));",
+			"\tconst diffHrs = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));",
+			"\tconst diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));",
+			"\t",
+			"\tif (diffMonths > 0) return `${diffMonths} months, ${diffDays} days, ${diffHrs} hrs, ${diffMins} min`;",
+			"\tif (diffDays > 0) return `${diffDays} days, ${diffHrs} hrs, ${diffMins} min`;",
+			"\tif (diffHrs > 0) return `${diffHrs} hrs, ${diffMins} min`;",
+			"\t",
+			"\treturn `${diffMins} min`;",
+			"};"
+		],
+		"description": "In Js insert code for TimeSpan comparing with current time"
+	},
+	"WSChangeName": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-WSChangeName",
+		"body": [
+			"const jFLocalChangeName = (inNameToChange) => {",
+			"\tlet jVarLocalObjectToServer = {};",
+			"\tjVarLocalObjectToServer.Type = 'ChangeName';",
+			"\tjVarLocalObjectToServer.Message = inNameToChange;",
+			"\t",
+			"\twebSocket.send(JSON.stringify(jVarLocalObjectToServer));",
+			"};"
+		],
+		"description": "In Js insert code for Change Name through WebSocket"
+	},
+	"GetTodayDate": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-GetTodayDate",
+		"body": [
+			"const jFLocalTodayDate = () => {",
+			"\tconst today = new Date();",
+			"\t",
+			"\tconst year = today.getFullYear();",
+			"\tconst month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed, so add 1",
+			"\tconst day = String(today.getDate()).padStart(2, '0');",
+			"\tconst formattedDate = `${year}-${month}-${day}`;",
+			"\treturn formattedDate;",
+			"};"
+		],
+		"description": "In Js insert code for TimeSpan comparing with current time"
+	},
+	"HtmlDomAssignDateToInput": {
+		"scope": "javascript,typescript",
+		"prefix": "KS-HtmlDomAssignDateToInput",
+		"body": [
+			"let jFLocalToInput$1 = () => {",
+			"\tlet jVarLocalHtmlId = '$1';",
+			"\tlet jVarLocal$1 = document.getElementById(jVarLocalHtmlId);",
+			"   ",
+			"   if (jVarLocal$1 === null === false) {",
+			"\tconst today = new Date();",
+			"\t",
+			"\tconst year = today.getFullYear();",
+			"\tconst month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed, so add 1",
+			"\tconst day = String(today.getDate()).padStart(2, '0');",
+			"\tconst formattedDate = `${year}-${month}-${day}`;",
+			" \tjVarLocal$1.valueAsDate = formattedDate;",
+			"   };",
+			"};"
+		],
+		"description": "insert present date to an input with the id to be taken as input"
+	}
+}

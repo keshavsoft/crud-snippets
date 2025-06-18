@@ -2,10 +2,10 @@
   "name": "crud-snippets",
   "displayName": "crud-snippets",
   "description": "",
-  "version": "0.0.37",
+  "version": "1.0.2",
   "publisher": "KeshavSoft",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.86.0"
   },
   "categories": [
     "Snippets"
@@ -14,7 +14,7 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/v1"
       }
     ]
   }
